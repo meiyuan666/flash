@@ -1,15 +1,41 @@
 # OLAF
 
-- An Open Source Federated Learning Simulation Platform
-- IMC2020: [IMC2020](https://conferences.sigcomm.org/imc/2020/)
-- paper: [TITLE]()
+- An Open Source *Heterogeneity-Aware* Federated Learning Platform
+- This repository is based on a fork of [Leaf](https://leaf.cmu.edu/), a benchmark for federated settings.
+- Target Comference: [IMC'20](https://conferences.sigcomm.org/imc/2020/)
+- paper: [Characterizing the Influence of Heterogeneity in Federated Learning]()
+
+
+## How to run it
+
+### example
+
+```bash
+git clone https://github.com/imc20submission/olaf.git
+pip3 install -r requirements.txt
+# download data, modify code if needed, refer to Chapter.Dataset for more details
+cd models/
+python3 main.py [--config yourconfig.cfg]
+# use --config option to specify the config-file, default.cfg will be used if not specified
+# the output log is CONFIG_FILENAME.log
+```
 
 
 
-## What can OLAF simulate?
+### results in paper
 
-Briefly speaking, we develop OLAF to simulate federated learning process more in line with the fact. 
+here is some examples for experiment result we reported in our paper
 
+You can just modify the `models/default.cfg` and then run `python main.py`, here are some pieces of config details we used
+
+- exp1
+- exp2
+- exp3
+
+
+## What is OLAF?
+
+Briefly speaking, we develop OLAF to incoporate **heterogeneity** into the federated learning simulation process. 
 
 
 ### Deadline
@@ -34,7 +60,7 @@ Each client is bundled with a timer, which is bundled with one trace. Timer gets
 
 
 
-#### Statistic Heterogeneity
+#### Data Heterogeneity
 
 - data in each client is non-i.i.d
 - you can set `max_sample` to control the max sample number in each client
@@ -107,35 +133,6 @@ fedprox_active_frac 0.8
 ```
 
 
-
-## How to run it
-
-### example
-
-```bash
-git clone https://github.com/imc20submission/olaf.git
-pip3 install -r requirements.txt
-# download data, modify code if needed, refer to Chapter.Dataset for more details
-cd models/
-python3 main.py [--config yourconfig.cfg]
-# use --config option to specify the config-file, default.cfg will be used if not specified
-# the output log is CONFIG_FILENAME.log
-```
-
-
-
-### results in paper
-
-here is some examples for experiment result we reported in our paper
-
-You can just modify the `models/default.cfg` and then run `python main.py`, here are some pieces of config details we used
-
-- exp1
-- exp2
-- exp3
-
-
-
 ## Datasets
 
 ### DL Datasets
@@ -145,14 +142,6 @@ You can just modify the `models/default.cfg` and then run `python main.py`, here
 - **Overview:** Image Dataset
 - **Details:** 62 different classes (10 digits, 26 lowercase, 26 uppercase), images are 28 by 28 pixels (with option to make them all 128 by 128 pixels), 3500 users
 - **Task:** Image Classification
-
-
-
-#### Sentiment140
-
-- **Overview:** Text Dataset of Tweets
-- **Details**: 660120 users
-- **Task:** Sentiment Analysis
 
 
 
@@ -172,11 +161,6 @@ You can just modify the `models/default.cfg` and then run `python main.py`, here
 
 
 
-#### Read-World Dataset
-
-- we are so sad that we cannot open the real-world dataset due to privacy enforcement
-
-
 
 ### User Behavior Trace
 
@@ -185,6 +169,8 @@ You can just modify the `models/default.cfg` and then run `python main.py`, here
 - modify the file path in [models/client.py](models/client.py), 
 
   i.e.  `with open('/path/to/user_behavior_trace.json', 'r', encoding='utf-8') as f: ` 
+
+- The trace tracks the device’s meta information and its status changes, including battery chargestatus, battery level, network environment, screen lock status, and screen on and off. (See more details in our [manuscript]().)
 
 
 
