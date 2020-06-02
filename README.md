@@ -1,4 +1,4 @@
-# OLAF
+# FLASH
 
 - An Open Source *Heterogeneity-Aware* Federated Learning Platform
 - This repository is based on a fork of [Leaf](https://leaf.cmu.edu/), a benchmark for federated settings.
@@ -11,7 +11,7 @@
 ### example
 
 ```bash
-git clone https://github.com/imc20submission/olaf.git
+git clone https://github.com/imc20submission/flash.git
 pip3 install -r requirements.txt
 # download data, modify code if needed, refer to Chapter.Dataset for more details
 cd models/
@@ -33,9 +33,9 @@ You can just modify the `models/default.cfg` and then run `python main.py`, here
 - exp3
 
 
-## What is OLAF?
+## What is FLASH?
 
-Briefly speaking, we develop OLAF to incoporate **heterogeneity** into the federated learning simulation process. 
+Briefly speaking, we develop FLASH to incoporate **heterogeneity** into the federated learning simulation process. 
 
 
 ### Deadline
@@ -56,7 +56,7 @@ The source code for measure the on-device training time is available in the [and
 
 #### Behavior Heterogeneity
 
-Each client is bundled with a timer, which is bundled with one trace. Timer gets the available time according to [google definition](https://arxiv.org/pdf/1902.01046.pdf). OLAF will run in ideal mode if trace file is not found or `behav_hete` is set to `False`
+Each client is bundled with a timer, which is bundled with one trace. Timer gets the available time according to [google definition](https://arxiv.org/pdf/1902.01046.pdf). FLASH will run in ideal mode if trace file is not found or `behav_hete` is set to `False`
 
 
 
