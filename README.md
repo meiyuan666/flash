@@ -2,7 +2,7 @@
 
 - An Open Source *Heterogeneity-Aware* Federated Learning Platform
 - This repository is based on a fork of [Leaf](https://leaf.cmu.edu/), a benchmark for federated settings.
-- Target Comference: [IMC'20](https://conferences.sigcomm.org/imc/2020/)
+- Target Conference: [IMC'20](https://conferences.sigcomm.org/imc/2020/)
 - paper: [Characterizing the Influence of Heterogeneity in Federated Learning]()
 
 
