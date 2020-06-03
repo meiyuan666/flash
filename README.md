@@ -164,7 +164,7 @@ fedprox_active_frac 0.8
 
 ### User Behavior Trace
 
-- you can download the user behavior trace data [here](https://drive.google.com/file/d/1oj-9byiw5r2iEIn9GburekJRKxtdFU7i/view?usp=sharing).
+- you can download the user behavior trace data [here](https://drive.google.com/file/d/1M62hlt2KpF6IRGZi_gEDv7DE3_s0_ihD/view?usp=sharing).
 
 - modify the file path in [models/client.py](models/client.py), 
 
